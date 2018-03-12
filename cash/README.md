@@ -21,4 +21,4 @@ Convert an amount of one currency to another one
  
  It's also possible to convert one to multiples currencies by spacing each currency
  
-  `node bin/index.js 100 eur usd bgn rub`
+  `node bin/index.js 100 eur usd bgn rub` 
