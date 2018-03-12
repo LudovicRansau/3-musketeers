@@ -5,8 +5,10 @@ const chalk = require('chalk');
 const ora = require('ora');
 const currencies = require('../lib/currencies.json');
 
+/*API for the exchange rate*/
 const API = 'https://api.fixer.io/latest';
 
+/*Function to convert a currency*/
 const convert = configuration => {
   const {amount, to, from, response, loading} = configuration;
 
@@ -34,6 +36,7 @@ const convert = configuration => {
   process.exit(1);
 };
 
+/*To display the conversion of the currency*/
 const cash = async command => {
   const amount = command.amount;
   const from = command.from.toUpperCase();
