@@ -7,6 +7,10 @@ test('should default to returning then default ifself', () => {
   expect(convert(2, 'BTC', 'BTC')).toBe(2);
 });
 
+test('should return a number', () => {
+   expect(typeof(convert(2, 'BTC', 'BTC', 'Number'))).toBe("number");
+});
+
 test('should return a Big number', () => {
   expect(convert(2, 'BTC', 'BTC', 'Big')).toBeInstanceOf(Big);
 });
