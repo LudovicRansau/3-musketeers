@@ -10,6 +10,7 @@ const argv = process.argv.slice(2);
 
 helpers(argv);
 
+/** Function to convert default currency (or USD by default) into another (by default: USD, EUR, GPB) **/
 const command = {
   'amount': argv[0] || 1,
   'from': argv[1] || config.get('defaultFrom', 'USD'),
