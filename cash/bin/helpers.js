@@ -8,6 +8,7 @@ const config = new Conf();
 
 updateNotifier({pkg}).notify();
 
+/*Save as default currency*/
 const saveCurrencies = argv => {
   config.set('defaultFrom', argv[1] || config.get('defaultFrom', 'USD'));
   config.set(
@@ -21,10 +22,11 @@ const saveCurrencies = argv => {
 };
 
 const version = () => {
-  console.log(pkg.version);
+  console.log(pkg.version);//Display version number
   process.exit(1);
 };
 
+//Display helper for user
 const help = () => {
   console.log(`
 Usage:
