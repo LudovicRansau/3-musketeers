@@ -4,8 +4,7 @@ const convert = require('..');
 const Big = require('big.js');
 
 test('should default to returning then default ifself', () => {
-  //convert(2, 'BTC', 'BTC');
-  throw new Error('test not yet defined... write your test here');
+  expect(convert(2, 'BTC', 'BTC')).toBe(2);
 });
 
 test('should return a number', () => {
