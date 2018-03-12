@@ -7,39 +7,28 @@ test('should default to returning then default ifself', () => {
   expect(convert(2, 'BTC', 'BTC')).toBe(2);
 });
 
-test('should return a number', () => {
-  //convert(2, 'BTC', 'BTC', 'Number');
-  throw new Error('test not yet defined... write your test here');
-});
-
 test('should return a Big number', () => {
-  //convert(2, 'BTC', 'BTC', 'Big');
-  throw new Error('test not yet defined... write your test here');
+  expect(convert(2, 'BTC', 'BTC', 'Big')).toBeInstanceOf(Big);
 });
 
 test('should return a string', () => {
-  //convert(2100, 'mBTC', 'BTC', 'String');
-  throw new Error('test not yet defined... write your test here');
+  expect(typeof convert(2100, 'mBTC', 'BTC', 'String')).toBe('string');
 });
 
 test('should convert a number from interger', () => {
-  //convert(123456789012345, 'Satoshi', 'BTC', 'Number');
-  throw new Error('test not yet defined... write your test here');
+  expect(typeof convert(123456789012345, 'Satoshi', 'BTC', 'Number')).toBe('number');
 });
 
 test('should convert a number from float', () => {
-  //convert(1234567.89012345, 'BTC', 'Satoshi', 'Number');
-  throw new Error('test not yet defined... write your test here');
+  expect(typeof convert(1234567.89012345, 'BTC', 'Satoshi', 'Number')).toBe('number');
 });
 
 test('should convert a string', () => {
-  //convert('2', 'BTC', 'BTC', 'Number');
-  throw new Error('test not yet defined... write your test here');
+  expect(typeof convert('2', 'BTC', 'BTC', 'Number')).toBe('number');
 });
 
 test('should convert a Big number', () => {
-  //convert(new Big(2), 'BTC', 'BTC', 'Number');
-  throw new Error('test not yet defined... write your test here');
+  expect(typeof convert(new Big(2), 'BTC', 'BTC', 'Number')).toBe('number');
 });
 
 test('should convert a NaN to a number', () => {
